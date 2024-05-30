@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: admin
+  security:
+    user:
+      name: userAdmin
+      password: passwordAdmin
+server:
+  port: 5004

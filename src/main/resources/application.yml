@@ -1,9 +1,11 @@
 spring:
   application:
     name: admin
+  config:
+    import: optional:file:.env[.properties]
   security:
     user:
-      name: userAdmin
-      password: passwordAdmin
+      name: ${SPRING_ADMIN_USER}
+      password: ${SPRING_ADMIN_PASSWORD}
 server:
   port: 5004

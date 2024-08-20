@@ -32,7 +32,7 @@ public class WebSecurityConfig {
                 })
                 .csrf(Customizer.withDefaults())
                 .csrf(it -> it.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse())
-                        .ignoringRequestMatchers("/instances", "/actuator/**"));
+                        .ignoringRequestMatchers("/instances", "/instances/**", "/actuator/**"));
         return httpSecurity.build();
     }
 
